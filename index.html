@@ -16,56 +16,130 @@
 		<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel='stylesheet' href='libs/fullcalendar/fullcalendar.css' />
+		<link rel='stylesheet' href='libs/fullcalendar/fullcalendar.css' />
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
 		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-        
-         <nav>
-    <div class="nav-wrapper grey darken-1">
-      <a href="#" class="brand-logo">Event</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="">Home</a></li>
-        <li><a href="">Preference</a></li>
-        <li>
-					<i class="material-icons">account_circle</i>
-				</li>
-      </ul>
-             </div>
-            </nav>
-        
-          <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="modal-trigger waves-effect waves-light btn-floating btn-large blue lighten-3" href="#modal1">
-      <i class="large material-icons">mode_edit</i>
-    </a>
-        </div>
-        
-        
-        <div id='calendar'class = "z-depth-1"></div>
-        
-        
-        
+		<nav>
+			<div class="nav-wrapper grey darken-1">
+				<a href="#" class="brand-logo">Event</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!--
+                    <li class="search">
+                        <div class="search-wrapper card">
+            <input id="search"><i class="material-icons">search</i>
+            <div class="search-results"></div>
+                        </div></li>
 
-  <!-- Modal本物 -->
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-    </div>
+-->
+                    <li class="search">
+                        <div class="input-field grey">
+          <i class="material-icons prefix">search</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix"></label>
+        </div>
+                        
+                        
+                    </li>
+                    
+                    
+                    
+					<li>
+						<a href="">Home</a>
+					</li>
+					<li>
+						<a href="">Preference</a>
+					</li>
+					<li>
+						<i class="material-icons account">account_circle</i>
+					</li>
+                    
+				</ul>
+			</div>
+		</nav>
+		<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+			<a class="modal-trigger waves-effect waves-light btn-floating btn-large blue lighten-3" href="#modal1">
+				<i class="large material-icons">mode_edit</i>
+			</a>
+		</div>
+		<div id='calendar'class = "z-depth-1"></div>
+		<!-- Modal本物 -->
+		<div id="modal1" class="modal modal-fixed-footer">
+			<div class="modal-content container">
+				<h4>Create New Event</h4>
+  
+  <div class="row">
+    <form class="col s12">
+        <div class="row">
+        <div class="input-field col s12">
+          <input id="event_name" type="text" class="validate">
+          <label for="event_name">Event Name</label>
+        </div>
+      </div>
+        
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Description</label>
+        </div>
+      </div>
+        </div>
+      
+       <div class="row">
+        <div class="input-field col s12">
+          <input id="event_url" type="text" class="validate">
+          <label for="event_url">URL</label>
+        </div>
+      </div>
+      
+      
+<div class="row">
+    <div class="input-field col s6">
+              
+    <select>
+      <option value="" disabled selected>Choose</option>
+      <option value="1">IT</option>
+      <option value="2">Bussiness</option>
+      <option value="3">Culture</option>
+        <option value="4">Music</option>
+    </select>  
+    <label>category</label>
   </div>
         
-        
+    <div class="input-field col s6">
+              
+    <select>
+      <option value="" disabled selected>Choose</option>
+      <option value="1">Contest</option>
+      <option value="2">Meetup</option>
+      <option value="3">Study</option>
+        <option value="4">Community</option>
+    </select> 
+    <label>Event Style</label>
+  </div>
+      </div>
+      
+      
+<label>Date from</label>
+      <input type="text" class="datetimepicker">
+      <label>Date To</label>
+      <input type="text" class="datetimepicker">
+
+    </form>
+                
+                
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Create</a>
+			</div>
+		</div>
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-        <script src='libs/fullcalendar/lib/moment.min.js'></script>
-        <script src='libs/fullcalendar/fullcalendar.js'></script>
+                <script src="js/jquery.datetimepicker.full.min.js"></script>
+		<script src='libs/fullcalendar/lib/moment.min.js'></script>
+		<script src='libs/fullcalendar/fullcalendar.js'></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
-
-
-

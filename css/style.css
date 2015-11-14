@@ -2,14 +2,37 @@
 
 
 	}
+/*
+li.search
+{
+    position: absolute;
+     box-sizing: inherit;
+    top: 120px;
+
+}
+input#search
+{
+
+ display: block;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    height: 45px;
+    padding: 0 45px 0 15px;
+    border: 0; 
+    box-sizing: inherit;
+
+}
+*/
+
 
 	#calendar {
 		max-width: 900px;
 		margin: 30px auto;
 	}
 
-.material-icons
+.account
 {
     margin-right: 15px;
-    
+    margin-left : 15px;
 }
