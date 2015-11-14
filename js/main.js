@@ -1,28 +1,85 @@
 $( document ).ready(function(){
-       $(".button-collapse").sideNav();
-      $('select').material_select();
-       $('.datepicker').pickadate({
-   selectMonths: true, // Creates a dropdown to control month
-   selectYears: 15 // Creates a dropdown of 15 years to control year
- });
+      $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+     
+    $('#calendar').fullCalendar({
+        
+      header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2015-02-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2015-02-07',
+					end: '2015-02-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2015-02-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2015-02-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2015-02-11',
+					end: '2015-02-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2015-02-12T10:30:00',
+					end: '2015-02-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2015-02-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2015-02-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2015-02-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2015-02-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2015-02-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2015-02-28'
+				}
+			]
+        ,
+        timeFormat: "H:mm"
+        
+        
+        
+        
+    })
 })
 
-function create()
-{
-    
-     
-
-}
 
 
-function addmember()
-{
-    var name =  $(':text[name="share_ppl_name_input"]').val();
-    var mail =  $(':text[name="share_ppl_address_input"]').val();
-    var auth = $('select[name="share_ppl_auth_imput"]').val();
 
-
- $('.memberlist').after("<tr><td>"+ name +"</td><td>" + mail + "</td><td>" + auth + "</td></tr>");   
-    
-}
 

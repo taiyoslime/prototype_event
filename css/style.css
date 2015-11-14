@@ -1,22 +1,13 @@
+	body {
 
 
-.update_progress
-{
-    animation: anim 5s ease-out;
-}
-@keyframes anim
-{
-    0%{width:0%;}
-    50%{width:37%;}
-    90%{width:85%}
-    100%{width:100%;}
-}
+	}
 
-.create_group
-{
+	#calendar {
+		max-width: 900px;
+		margin: 30px auto;
+	}
 
-    margin-top:50px;
-}
 .material-icons
 {
     margin-right: 15px;
